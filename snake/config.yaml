@@ -1,0 +1,45 @@
+# Snake environment parameters — edit this file to tune gameplay and rendering.
+# Loaded automatically by SnakeEnv unless you pass config_path= or a SnakeConfig object.
+
+grid:
+  width: 20
+  height: 20
+
+episode:
+  max_steps: 1000
+
+rewards:
+  food: 10.0
+  death: -10.0
+  step: -0.1
+
+snake:
+  initial_length: 3
+  # One of: up, right, down, left — body extends behind the head along the opposite axis.
+  start_direction: right
+
+render:
+  fps: 10
+  cell_size_px: 20
+  cell_padding_px: 1
+  window_title: SnakeEnv
+
+colors:
+  background: [15, 15, 20]
+  grid_line: [35, 35, 45]
+  snake: [46, 204, 113]
+  head: [39, 174, 96]
+  food: [231, 76, 60]
+
+ansi:
+  head: "@"
+  body: "#"
+  food: "*"
+  empty: "."
+
+observation:
+  size: 11
+
+demo:
+  num_episodes: 5
+  pause_between_episodes_sec: 0.5
